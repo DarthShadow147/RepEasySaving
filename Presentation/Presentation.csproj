@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EE81A14-10D0-4128-A080-706265AAF984}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Presentation</RootNamespace>
+    <AssemblyName>EasySaving</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\e_aam\Desktop\Setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo_LightGrey.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DFC497C71377ABF192C4B33BE72778599138BE55</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Presentation_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.7.0.7, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.7.0.7\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuyStationery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyStationery.Designer.cs">
+      <DependentUpon>BuyStationery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\Profits.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Profits.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\MemberDues.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberDues.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\ProfitsTotal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProfitsTotal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\BuyStationery1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuyStationery.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProfile.Designer.cs">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\ReportBuyStationery.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportBuyStationery.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\ESLoanSaving.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESLoanSaving.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\ESLoanQuery.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESLoanQuery.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWelcome.Designer.cs">
+      <DependentUpon>FormWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoanEstimate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanEstimate.Designer.cs">
+      <DependentUpon>LoanEstimate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\LoanReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoanReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LoanQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\LoanQuery.Designer.cs">
+      <DependentUpon>LoanQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoanRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanRequest.Designer.cs">
+      <DependentUpon>LoanRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members.Designer.cs">
+      <DependentUpon>Members.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments.Designer.cs">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\LoanSaving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\LoanSaving.Designer.cs">
+      <DependentUpon>LoanSaving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportContributions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportContributions.Designer.cs">
+      <DependentUpon>ReportContributions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\REPORT_CONTRIBUTIONS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORT_CONTRIBUTIONS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\REPORT_CONTRIBUTIONS_TOTAL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORT_CONTRIBUTIONS_TOTAL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\SettlementEvents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SettlementEvents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\ReportTransactionsHeader.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportTransactionsHeader.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\ReportTransactionsDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportTransactionsDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportProfits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportProfits.Designer.cs">
+      <DependentUpon>ReportProfits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settlement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement.Designer.cs">
+      <DependentUpon>Settlement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\SettlementSummary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SettlementSummary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowDues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowDues.Designer.cs">
+      <DependentUpon>ShowDues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\SHOW_DUES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SHOW_DUES.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery.Designer.cs">
+      <DependentUpon>Stationery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\SummayBinnacle.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SummayBinnacle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\TotalBinnacle.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TotalBinnacle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions.Designer.cs">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRecoveryPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRecoveryPassword.Designer.cs">
+      <DependentUpon>UserRecoveryPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSet\VaultTotal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VaultTotal.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyStationery.resx">
+      <DependentUpon>BuyStationery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProfile.resx">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWelcome.resx">
+      <DependentUpon>FormWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanEstimate.resx">
+      <DependentUpon>LoanEstimate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LoanQuery.rdlc" />
+    <EmbeddedResource Include="Reports\LoanQuery.resx">
+      <DependentUpon>LoanQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanRequest.resx">
+      <DependentUpon>LoanRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members.resx">
+      <DependentUpon>Members.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments.resx">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\LoanSaving.rdlc" />
+    <EmbeddedResource Include="Reports\LoanSaving.resx">
+      <DependentUpon>LoanSaving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportAccount.rdlc" />
+    <EmbeddedResource Include="Reports\ReportBuyStationery.rdlc" />
+    <EmbeddedResource Include="Reports\ReportContributions.rdlc" />
+    <EmbeddedResource Include="Reports\ReportContributions.resx">
+      <DependentUpon>ReportContributions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportPrintDues.rdlc" />
+    <EmbeddedResource Include="Reports\ReportProfits.rdlc" />
+    <EmbeddedResource Include="Reports\ReportProfits.resx">
+      <DependentUpon>ReportProfits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportSettlementEvent.rdlc" />
+    <EmbeddedResource Include="Reports\ReportSettlementVault.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTransactions.rdlc" />
+    <EmbeddedResource Include="Settlement.resx">
+      <DependentUpon>Settlement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowDues.resx">
+      <DependentUpon>ShowDues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery.resx">
+      <DependentUpon>Stationery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions.resx">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRecoveryPassword.resx">
+      <DependentUpon>UserRecoveryPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Reports\DataSet\Profits.xsc">
+      <DependentUpon>Profits.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\Profits.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Profits.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\Profits.xss">
+      <DependentUpon>Profits.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\MemberDues.xsc">
+      <DependentUpon>MemberDues.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\MemberDues.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MemberDues.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\MemberDues.xss">
+      <DependentUpon>MemberDues.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ProfitsTotal.xsc">
+      <DependentUpon>ProfitsTotal.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ProfitsTotal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProfitsTotal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\ProfitsTotal.xss">
+      <DependentUpon>ProfitsTotal.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\BuyStationery.xsc">
+      <DependentUpon>BuyStationery.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\BuyStationery.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BuyStationery1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\BuyStationery.xss">
+      <DependentUpon>BuyStationery.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ReportBuyStationery.xsc">
+      <DependentUpon>ReportBuyStationery.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ReportBuyStationery.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportBuyStationery.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\ReportBuyStationery.xss">
+      <DependentUpon>ReportBuyStationery.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ESLoanSaving.xsc">
+      <DependentUpon>ESLoanSaving.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ESLoanSaving.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ESLoanSaving.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\ESLoanSaving.xss">
+      <DependentUpon>ESLoanSaving.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ESLoanQuery.xsc">
+      <DependentUpon>ESLoanQuery.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ESLoanQuery.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ESLoanQuery.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\ESLoanQuery.xss">
+      <DependentUpon>ESLoanQuery.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\LoanReport.xsc">
+      <DependentUpon>LoanReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\LoanReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LoanReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\LoanReport.xss">
+      <DependentUpon>LoanReport.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Reports\DataSet\REPORT_CONTRIBUTIONS.xsc">
+      <DependentUpon>REPORT_CONTRIBUTIONS.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\REPORT_CONTRIBUTIONS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>REPORT_CONTRIBUTIONS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\REPORT_CONTRIBUTIONS.xss">
+      <DependentUpon>REPORT_CONTRIBUTIONS.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\REPORT_CONTRIBUTIONS_TOTAL.xsc">
+      <DependentUpon>REPORT_CONTRIBUTIONS_TOTAL.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\REPORT_CONTRIBUTIONS_TOTAL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>REPORT_CONTRIBUTIONS_TOTAL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\REPORT_CONTRIBUTIONS_TOTAL.xss">
+      <DependentUpon>REPORT_CONTRIBUTIONS_TOTAL.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\SHOW_DUES.xsc">
+      <DependentUpon>SHOW_DUES.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\SHOW_DUES.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SHOW_DUES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\SHOW_DUES.xss">
+      <DependentUpon>SHOW_DUES.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\SettlementEvents.xsc">
+      <DependentUpon>SettlementEvents.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\SettlementEvents.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SettlementEvents.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\SettlementEvents.xss">
+      <DependentUpon>SettlementEvents.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\SummayBinnacle.xsc">
+      <DependentUpon>SummayBinnacle.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\SummayBinnacle.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SummayBinnacle.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\SummayBinnacle.xss">
+      <DependentUpon>SummayBinnacle.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\TotalBinnacle.xsc">
+      <DependentUpon>TotalBinnacle.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\TotalBinnacle.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TotalBinnacle.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\TotalBinnacle.xss">
+      <DependentUpon>TotalBinnacle.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ReportTransactionsHeader.xsc">
+      <DependentUpon>ReportTransactionsHeader.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ReportTransactionsHeader.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportTransactionsHeader.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\ReportTransactionsHeader.xss">
+      <DependentUpon>ReportTransactionsHeader.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ReportTransactionsDetail.xsc">
+      <DependentUpon>ReportTransactionsDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\ReportTransactionsDetail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportTransactionsDetail.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\ReportTransactionsDetail.xss">
+      <DependentUpon>ReportTransactionsDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\VaultTotal.xsc">
+      <DependentUpon>VaultTotal.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\VaultTotal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VaultTotal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\VaultTotal.xss">
+      <DependentUpon>VaultTotal.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\SettlementSummary.xsc">
+      <DependentUpon>SettlementSummary.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet\SettlementSummary.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SettlementSummary.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\DataSet\SettlementSummary.xss">
+      <DependentUpon>SettlementSummary.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{1ebfe851-499f-45f9-a082-292117cc565a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{75793178-fa42-44ec-9d0e-253be3e3191d}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\IconsFormPrinc\bar-graph1.png" />
+    <Content Include="Icons\IconsFormPrinc\calendar %281%291.png" />
+    <Content Include="Icons\IconsFormPrinc\cancel.png" />
+    <Content Include="Icons\IconsFormPrinc\Close.png" />
+    <Content Include="Icons\IconsFormPrinc\health %281%291.png" />
+    <Content Include="Icons\IconsFormPrinc\Health-PNG-Image.png" />
+    <Content Include="Icons\IconsFormPrinc\Health-PNG-Image2.png" />
+    <Content Include="Icons\IconsFormPrinc\left-arrow %281%29.png" />
+    <Content Include="Icons\IconsFormPrinc\logout %281%291.png" />
+    <Content Include="Icons\IconsFormPrinc\loupe %281%29.png" />
+    <Content Include="Icons\IconsFormPrinc\maximize3.png" />
+    <Content Include="Icons\IconsFormPrinc\menu.png" />
+    <Content Include="Icons\IconsFormPrinc\menu2.png" />
+    <Content Include="Icons\IconsFormPrinc\Minimize.png" />
+    <Content Include="Icons\IconsFormPrinc\Normal.png" />
+    <Content Include="Icons\IconsFormPrinc\patient %281%291.png" />
+    <Content Include="Icons\IconsFormPrinc\payment1.png" />
+    <Content Include="Icons\IconsFormPrinc\person-settings1.png" />
+    <Content Include="Icons\IconsFormPrinc\phone-book %281%291.png" />
+    <Content Include="Icons\IconsFormPrinc\seo1.png" />
+    <Content Include="Icons\IconsFormPrinc\user %281%29.png" />
+    <Content Include="Icons\IconsFormPrinc\user.png" />
+    <Content Include="Icons\IconsFormPrinc\userEdit.png" />
+    <Content Include="Icons\IconsLogin\Close_Icon.png" />
+    <Content Include="Icons\IconsLogin\Minimize_Icon.png" />
+    <Content Include="Icons\IconsLogin\warning.png" />
+    <Content Include="Icons\IconsLogos\Logo_Blue.png" />
+    <Content Include="Icons\IconsLogos\Logo_Grey.png" />
+    <Content Include="Icons\IconsLogos\Logo_LightGrey.png" />
+    <Content Include="Icons\IconsLogos\Logo_Original.png" />
+    <Content Include="Icons\IconsLogos\Logo_White.png" />
+    <Content Include="Logo_LightGrey.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IconsMenu\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
